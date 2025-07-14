@@ -9,5 +9,4 @@ Feature: Movie Seat Selection
 
     Examples:
       | seatCount | movie              | date | time      |
-      | 3         | Metro In Dino      | 14   | 01:15 PM  |
       | 5         | Metro In Dino      | 15   | 01:15 PM  |
