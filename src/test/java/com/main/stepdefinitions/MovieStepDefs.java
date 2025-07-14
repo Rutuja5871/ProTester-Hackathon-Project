@@ -14,7 +14,7 @@ public class MovieStepDefs {
         this.common = common;
     }
 
-    @When("I choose {int} seats for movie {string} on date {string} at time {string}")
+    @When("The user choose {int} seats for movie {string} on date {string} at time {string}")
     public void chooseSeats(int n, String movie, String date, String time) throws InterruptedException {
         System.out.println("→ ENTERING chooseSeats: " + n + ", " + movie + ", " + date + ", " + time);
         moviePage = new DistrictMoviePage(Hooks.driver);
@@ -22,7 +22,7 @@ public class MovieStepDefs {
         System.out.println("→ EXITING chooseSeats");
     }
 
-    @Then("I should see exactly {int} seats selected")
+    @Then("The user should see exactly {int} seats selected")
     public void verifySeatCount(int expected) {
         String raw = moviePage.getSeatsCountText(); 
         System.out.println("Seats‐header raw text: \"" + raw + "\"");

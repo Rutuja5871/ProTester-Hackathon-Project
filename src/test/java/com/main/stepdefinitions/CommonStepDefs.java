@@ -7,17 +7,17 @@ import io.cucumber.java.en.*;
 public class CommonStepDefs {
     private HomePage home;
 
-    @Given("I am on District.in home page")
+    @Given("The user is on District.in home page")
     public void onHomePage() {
         home = new HomePage(Hooks.driver);
     }
 
-    @And("I dismiss the popup")
+    @And("The user changes the location")
     public void dismissPopup() {
         home.dismissPopup();
     }
 
-    @And("I select city index {int}")
+    @And("The user selects city index {int}")
     public void selectCityIndex(int idx) {
         home.selectCityByIndex(idx);
     }

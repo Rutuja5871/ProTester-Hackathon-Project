@@ -1,11 +1,11 @@
 Feature: Movie Seat Selection 
 
  Scenario Outline: Validate seat count after selection
-    Given I am on District.in home page
-    And I dismiss the popup
-    And I select city index 9
-    When I choose <seatCount> seats for movie "<movie>" on date "<date>" at time "<time>"
-    Then I should see exactly <seatCount> seats selected
+    Given The user is on District.in home page
+    And The user changes the location
+    And The user selects city index 9
+    When The user choose <seatCount> seats for movie "<movie>" on date "<date>" at time "<time>"
+    Then The user should see exactly <seatCount> seats selected
 
     Examples:
       | seatCount | movie              | date | time      |

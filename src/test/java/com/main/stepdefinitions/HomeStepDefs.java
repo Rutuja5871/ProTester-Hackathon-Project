@@ -16,7 +16,7 @@ public class HomeStepDefs {
         this.common = common;
     }
     
-    @When("I scroll to the footer")
+    @When("The user scroll to the footer")
     public void i_scroll_to_the_footer() {
         if (districtHomePage == null) {
             districtHomePage = new DistrictHomePage(driver);
@@ -24,7 +24,7 @@ public class HomeStepDefs {
         districtHomePage.scrollToFooter();
     }
 
-    @When("I click the {string} icon and verify title {string}")
+    @When("The user click the {string} icon and verify title {string}")
     public void i_click_and_verify_social_icon(String icon, String expectedTitle) {
         if (districtHomePage == null) {
             districtHomePage = new DistrictHomePage(driver);
@@ -32,7 +32,7 @@ public class HomeStepDefs {
         districtHomePage.clickAndVerifySocialIcon(icon, expectedTitle);
     }
 
-    @Then("I close the social media window")
+    @Then("The user close the social media window")
     public void i_close_the_social_media_window() {
         // Handled by clickAndVerifySocialIcon()
     }
